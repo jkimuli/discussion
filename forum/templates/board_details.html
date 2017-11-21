@@ -38,13 +38,13 @@
                 {% for topic in topics%}
 
                 <tr>
-                    <td><a href="{{board.get_absolute_url}}"> {{topic.subject}} </a> 
+                    <td><a href="{% url 'topic_details' board.name topic.pk %}"> {{topic.subject}} </a>
                     
                     </td>
 
                     <td> {{topic.starter.username}} </td>
-                    <td> 0 </td>
-                    <td> 0 </td>
+                    <td> {{ topic.replies }} </td>
+                    <td> {{ topic.views }} </td>
                     <td> {{topic.last_updated }} </td>
                 </tr>
                 

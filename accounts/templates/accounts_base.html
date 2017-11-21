@@ -19,38 +19,10 @@
 
     <body>
 
-       {% block body %}
-
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-            <div class="container">
-
-            <a class="navbar-brand" href="{% url 'index' %}">Django Boards</a>
-
-            </div>
-
-        </nav>
+     {% block body %}
 
 
-        <div class="container">
-
-            <ol class="breadcrumb my-4">
-
-                {%  block breadcrumb %}
-
-                {% endblock%}
-
-            </ol>
-
-               {% block content %}
-
-               {% endblock %}
-
-
-
-        </div>
-
-     {% endblock body %}
+     {%endblock body %}
 
     <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
     <script src="{% static 'js/popper.min.js' %}"></script>
